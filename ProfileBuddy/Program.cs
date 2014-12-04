@@ -18,5 +18,14 @@ namespace ProfileBuddy
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainMenu());
         }
+
+
+        public static void printOut(String routeName)
+        {
+
+            String nameOfRoute = routeName;
+            System.Diagnostics.Debug.WriteLine(nameOfRoute);
+
+        }
     }
 }

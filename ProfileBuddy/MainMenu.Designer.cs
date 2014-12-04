@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.labelMainMenu = new System.Windows.Forms.Label();
-            this.generateRouteButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.generateRouteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelMainMenu
@@ -49,19 +49,6 @@
             this.labelMainMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.labelMainMenu.UseMnemonic = false;
             // 
-            // generateRouteButton
-            // 
-            this.generateRouteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.generateRouteButton.AutoSize = true;
-            this.generateRouteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateRouteButton.ForeColor = System.Drawing.Color.Green;
-            this.generateRouteButton.Location = new System.Drawing.Point(12, 95);
-            this.generateRouteButton.Name = "generateRouteButton";
-            this.generateRouteButton.Size = new System.Drawing.Size(335, 104);
-            this.generateRouteButton.TabIndex = 1;
-            this.generateRouteButton.Text = "Generate Route";
-            this.generateRouteButton.UseVisualStyleBackColor = true;
-            // 
             // exitButton
             // 
             this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -75,6 +62,20 @@
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // generateRouteButton
+            // 
+            this.generateRouteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.generateRouteButton.AutoSize = true;
+            this.generateRouteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateRouteButton.ForeColor = System.Drawing.Color.Green;
+            this.generateRouteButton.Location = new System.Drawing.Point(12, 95);
+            this.generateRouteButton.Name = "generateRouteButton";
+            this.generateRouteButton.Size = new System.Drawing.Size(335, 104);
+            this.generateRouteButton.TabIndex = 1;
+            this.generateRouteButton.Text = "Generate Route";
+            this.generateRouteButton.UseVisualStyleBackColor = true;
+            this.generateRouteButton.Click += new System.EventHandler(this.generateRouteButton_Click);
             // 
             // MainMenu
             // 
@@ -99,8 +100,8 @@
         #endregion
 
         private System.Windows.Forms.Label labelMainMenu;
-        private System.Windows.Forms.Button generateRouteButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button generateRouteButton;
     }
 }
 
