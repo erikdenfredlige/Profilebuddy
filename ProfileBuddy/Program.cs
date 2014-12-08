@@ -20,12 +20,18 @@ namespace ProfileBuddy
         }
 
 
-        public static void printOut(String routeName)
+        public static void printOut(String routeName, String minimumLevel, String maximumLevel, String minimumDurability, String minimumBagslots)
         {
 
             String nameOfRoute = routeName;
-            System.Diagnostics.Debug.WriteLine(nameOfRoute);
+            String minLevel = minimumLevel;
+            String maxLevel = maximumLevel;
+            String minDurability = minimumDurability;
+            String minBagSlots = minimumBagslots;
 
+            String writeToFile = "<HBProfile>" + "\r\n" + "    <Name>" + nameOfRoute + "</Name>" + "\r\n" + "    <MinLevel>" + minLevel + "</MinLevel>" + "\r\n";
+
+            System.IO.File.WriteAllText(@"C:\Users\Erik\Desktop\" + nameOfRoute + ".xml", writeToFile);
         }
     }
 }

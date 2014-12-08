@@ -37,19 +37,19 @@
             this.sellWhichItemsLabel = new System.Windows.Forms.Label();
             this.sellListBox = new System.Windows.Forms.CheckedListBox();
             this.nameOfRouteTB = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.minimumLevelTB = new System.Windows.Forms.TextBox();
+            this.maximumLevelTB = new System.Windows.Forms.TextBox();
             this.generateButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.minimumBagSlotsTB = new System.Windows.Forms.TextBox();
+            this.minimumDurabilityTB = new System.Windows.Forms.TextBox();
             this.minimumDurabilityLabel = new System.Windows.Forms.Label();
             this.minimumBagSlotsLabel = new System.Windows.Forms.Label();
             this.numberOfHotspotsLabel = new System.Windows.Forms.Label();
             this.numberOfHotspots = new System.Windows.Forms.Label();
             this.addHotspotButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.hotspotCoordinatesTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -135,19 +135,19 @@
             this.nameOfRouteTB.Size = new System.Drawing.Size(255, 20);
             this.nameOfRouteTB.TabIndex = 8;
             // 
-            // textBox2
+            // minimumLevelTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 35);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(50, 20);
-            this.textBox2.TabIndex = 9;
+            this.minimumLevelTB.Location = new System.Drawing.Point(92, 35);
+            this.minimumLevelTB.Name = "minimumLevelTB";
+            this.minimumLevelTB.Size = new System.Drawing.Size(50, 20);
+            this.minimumLevelTB.TabIndex = 9;
             // 
-            // textBox3
+            // maximumLevelTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(92, 61);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(50, 20);
-            this.textBox3.TabIndex = 10;
+            this.maximumLevelTB.Location = new System.Drawing.Point(92, 61);
+            this.maximumLevelTB.Name = "maximumLevelTB";
+            this.maximumLevelTB.Size = new System.Drawing.Size(50, 20);
+            this.maximumLevelTB.TabIndex = 10;
             // 
             // generateButton
             // 
@@ -173,19 +173,19 @@
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // textBox1
+            // minimumBagSlotsTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(50, 20);
-            this.textBox1.TabIndex = 13;
+            this.minimumBagSlotsTB.Location = new System.Drawing.Point(92, 113);
+            this.minimumBagSlotsTB.Name = "minimumBagSlotsTB";
+            this.minimumBagSlotsTB.Size = new System.Drawing.Size(50, 20);
+            this.minimumBagSlotsTB.TabIndex = 13;
             // 
-            // textBox4
+            // minimumDurabilityTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(92, 87);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(50, 20);
-            this.textBox4.TabIndex = 14;
+            this.minimumDurabilityTB.Location = new System.Drawing.Point(92, 87);
+            this.minimumDurabilityTB.Name = "minimumDurabilityTB";
+            this.minimumDurabilityTB.Size = new System.Drawing.Size(50, 20);
+            this.minimumDurabilityTB.TabIndex = 14;
             // 
             // minimumDurabilityLabel
             // 
@@ -210,29 +210,34 @@
             // numberOfHotspotsLabel
             // 
             this.numberOfHotspotsLabel.AutoSize = true;
-            this.numberOfHotspotsLabel.Location = new System.Drawing.Point(9, 196);
+            this.numberOfHotspotsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberOfHotspotsLabel.Location = new System.Drawing.Point(3, 196);
             this.numberOfHotspotsLabel.Name = "numberOfHotspotsLabel";
-            this.numberOfHotspotsLabel.Size = new System.Drawing.Size(104, 13);
+            this.numberOfHotspotsLabel.Size = new System.Drawing.Size(123, 13);
             this.numberOfHotspotsLabel.TabIndex = 18;
             this.numberOfHotspotsLabel.Text = "Number of Hotspots:";
             // 
             // numberOfHotspots
             // 
             this.numberOfHotspots.AutoSize = true;
-            this.numberOfHotspots.Location = new System.Drawing.Point(119, 196);
+            this.numberOfHotspots.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberOfHotspots.ForeColor = System.Drawing.Color.Yellow;
+            this.numberOfHotspots.Location = new System.Drawing.Point(132, 196);
             this.numberOfHotspots.Name = "numberOfHotspots";
-            this.numberOfHotspots.Size = new System.Drawing.Size(13, 13);
+            this.numberOfHotspots.Size = new System.Drawing.Size(14, 13);
             this.numberOfHotspots.TabIndex = 19;
             this.numberOfHotspots.Text = "0";
             // 
             // addHotspotButton
             // 
+            this.addHotspotButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addHotspotButton.Location = new System.Drawing.Point(241, 191);
             this.addHotspotButton.Name = "addHotspotButton";
             this.addHotspotButton.Size = new System.Drawing.Size(106, 32);
             this.addHotspotButton.TabIndex = 20;
-            this.addHotspotButton.Text = "Add hotspot! / Add another!";
+            this.addHotspotButton.Text = "Add hotspot!";
             this.addHotspotButton.UseVisualStyleBackColor = true;
+            this.addHotspotButton.Click += new System.EventHandler(this.addHotspotButton_Click);
             // 
             // label1
             // 
@@ -240,16 +245,16 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(157, 13);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Enter hotspot:";
+            this.label1.Text = "Enter hotspot coordinates:";
             // 
-            // textBox5
+            // hotspotCoordinatesTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(6, 164);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(344, 20);
-            this.textBox5.TabIndex = 22;
+            this.hotspotCoordinatesTextBox.Location = new System.Drawing.Point(6, 164);
+            this.hotspotCoordinatesTextBox.Name = "hotspotCoordinatesTextBox";
+            this.hotspotCoordinatesTextBox.Size = new System.Drawing.Size(344, 20);
+            this.hotspotCoordinatesTextBox.TabIndex = 22;
             // 
             // GenerateRoute
             // 
@@ -257,19 +262,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(359, 412);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.hotspotCoordinatesTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.addHotspotButton);
             this.Controls.Add(this.numberOfHotspots);
             this.Controls.Add(this.numberOfHotspotsLabel);
             this.Controls.Add(this.minimumBagSlotsLabel);
             this.Controls.Add(this.minimumDurabilityLabel);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.minimumDurabilityTB);
+            this.Controls.Add(this.minimumBagSlotsTB);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.generateButton);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.maximumLevelTB);
+            this.Controls.Add(this.minimumLevelTB);
             this.Controls.Add(this.nameOfRouteTB);
             this.Controls.Add(this.sellListBox);
             this.Controls.Add(this.sellWhichItemsLabel);
@@ -299,18 +304,18 @@
         private System.Windows.Forms.Label sellWhichItemsLabel;
         private System.Windows.Forms.CheckedListBox sellListBox;
         private System.Windows.Forms.TextBox nameOfRouteTB;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox minimumLevelTB;
+        private System.Windows.Forms.TextBox maximumLevelTB;
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox minimumBagSlotsTB;
+        private System.Windows.Forms.TextBox minimumDurabilityTB;
         private System.Windows.Forms.Label minimumDurabilityLabel;
         private System.Windows.Forms.Label minimumBagSlotsLabel;
         private System.Windows.Forms.Label numberOfHotspotsLabel;
         private System.Windows.Forms.Label numberOfHotspots;
         private System.Windows.Forms.Button addHotspotButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox hotspotCoordinatesTextBox;
     }
 }
