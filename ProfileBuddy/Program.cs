@@ -20,18 +20,32 @@ namespace ProfileBuddy
         }
 
 
-        public static void printOut(String routeName, String minimumLevel, String maximumLevel, String minimumDurability, String minimumBagslots)
+        public static void printOut(String routeName, String minimumLevel, String maximumLevel, String minimumDurability, String minimumBagslots, String hotspots)
         {
 
-            String nameOfRoute = routeName;
-            String minLevel = minimumLevel;
-            String maxLevel = maximumLevel;
-            String minDurability = minimumDurability;
-            String minBagSlots = minimumBagslots;
+            String writeToFile =
+                "<HBProfile>\r\n\r\n" + "    <Name>" + routeName + "</Name>\r\n" + 
+                "    <MinLevel>" + minimumLevel + "</MinLevel>\r\n" +
+                "    <MaxLevel>" + minimumLevel + "</MaxLevel>\r\n" +
+                "    <MinDurability>" + minimumDurability + "</MinDurability>\r\n" +
+                "    <MinFreeBagSlots>" + minimumBagslots + "</MinFreeBagSlots>\r\n\r\n" +
+                "    <Hotspots>" +
+                hotspots + "\r\n" +
+                "    </Hotspots>\r\n\r\n" +
+                "</HBProfile>";
 
-            String writeToFile = "<HBProfile>" + "\r\n" + "    <Name>" + nameOfRoute + "</Name>" + "\r\n" + "    <MinLevel>" + minLevel + "</MinLevel>" + "\r\n";
+            System.IO.File.WriteAllText(@"C:\Users\Erik\Desktop\" + routeName + ".xml", writeToFile);
+        }
 
-            System.IO.File.WriteAllText(@"C:\Users\Erik\Desktop\" + nameOfRoute + ".xml", writeToFile);
+        public static string printOutArray(String[] coordinates)
+        {
+            String coordinateRoute = "";
+            for (int i = 0; coordinates[i] != null; i++)
+            {
+                coordinateRoute = coordinateRoute + "\r\n        " + coordinates[i];
+            }
+
+            return coordinateRoute;
         }
     }
 }
